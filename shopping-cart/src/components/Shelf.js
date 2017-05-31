@@ -14,23 +14,23 @@ class Shelf extends Component {
   }
 
   render() {
-    const shelfItems = this.state.shelfItems.map((item, id) => {
-      return(
-        <li key={id}>
-          {item}
-          <button onClick={() => this.props.addItem(item)}>+</button>
-        </li>
+      const shelfItems = this.state.shelfItems.map( (item, id) => {
+        return (
+          <li key={id}>
+            {item}
+            <button onClick={() => this.props.addItem(item)}>+</button>
+          </li>
+        )
+      })
+      return (
+        <div>
+          <h2>Store Inventory</h2>
+          <ul>
+              {shelfItems}
+          </ul>
+        </div>
       )
-    })
-    return(
-      <div>
-      <h2>Store Inventory</h2>
-      <ul>
-        {shelfItems}
-      </ul>
-      </div>
-    )
+    }
   }
-}
 
 export default Shelf
