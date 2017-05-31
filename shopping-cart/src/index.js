@@ -7,6 +7,8 @@ import Store from './Store'
 
 import './stylesheets/index.css'
 
+const StoreInstance = Store()
+
 ReactDOM.render(
   <Provider store={StoreInstance}>
     <App />
